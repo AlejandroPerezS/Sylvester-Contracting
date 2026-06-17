@@ -3,68 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sylvester Contracting | Toronto's Construction Experts</title>
-  <meta name="description" content="Premier GTA-based construction company specializing in renovations, specialized services, flooring, and maintenance.">
+  <title>RapidCare Industrial Services | Fast. Reliable. Done Right.</title>
+  <meta name="description" content="RapidCare Industrial Services: Built for warehouses, factories, and commercial sites. Concrete repair, industrial painting, facility maintenance, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-    /* Reset & Deep Premium Color Palette (Iron Root Dark Vibe) */
+    /* --- EDIT COLORS HERE --- */
     :root {
-      --bg-main: #0c0a12;       /* Deep purple-tinted black */
-      --bg-alt: #141122;        /* Slightly lighter background for section contrast */
-      --text-main: #f1f5f9;     /* Off-white crisp text */
-      --text-muted: #94a3b8;    /* Clean slate gray for descriptions */
-      --accent: #7c3aed;        /* Vibrant Logo Purple */
-      --accent-hover: #9061f9;  /* Bright hover state */
-      --border: rgba(255, 255, 255, 0.08);
+      /* Change this hex value to easily modify the Navigation Bar and Logo Background */
+      --nav-bg-color: #002955;
+      
+      /* Premium Light & Deep Blue Corporate Palette */
+      --bg-main: #ffffff;         /* Clean pure white background */
+      --bg-alt: #f8fafc;          /* Subtle light slate gray for section contrast */
+      --text-main: #0f172a;       /* Dark slate text for crisp legibility */
+      --text-muted: #475569;      /* Slate gray for industrial descriptions */
+      --accent-blue: #012a5d;     /* Deep Navy Blue for headings and buttons */
+      --accent-red: #E31837;      /* Vibrant Red matched to logo swoosh */
+      --accent-hover: #ff2a4a;    /* Hover Red state */
+      --border: rgba(0, 0, 0, 0.08); 
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--bg-main); line-height: 1.5; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-main); background-color: var(--bg-main); line-height: 1.6; scroll-behavior: smooth; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; object-fit: cover; }
     ul { list-style: none; }
 
     /* Top Bar */
     .top-bar {
-      background-color: #06040a;
+      background-color: #0b131f;
       color: #fff;
       font-size: 0.875rem;
       padding: 0.6rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .top-bar a { color: var(--accent-hover); font-weight: 600; }
+    .top-bar a { color: #fff; font-weight: 600; transition: color 0.2s; letter-spacing: 0.5px; }
+    .top-bar a:hover { color: var(--accent-red); }
+    .tagline-badge { background: var(--accent-red); color: white; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    /* Nav */
+    /* Nav Bar - Updated to use the new --nav-bg-color variable */
     nav {
-      padding: 1.25rem 5%;
+      padding: 0.75rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--bg-main);
-      border-bottom: 1px solid var(--border);
+      background: var(--nav-bg-color); 
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-    .logo img { height: 45px; width: auto; } /* Formatted to fit Sylvester-Contracting-logo.png nicely */
+    .logo-container { display: flex; align-items: center; gap: 0.75rem; }
+    .logo-img { height: 60px; width: auto; object-fit: contain; display: block; }
     
-    .nav-links { display: flex; gap: 2rem; align-items: center; font-weight: 500; }
-    .nav-links a { color: var(--text-muted); transition: color 0.2s; }
-    .nav-links a:hover { color: #fff; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; font-weight: 600; font-size: 0.95rem; }
+    .nav-links a { color: #e2e8f0; transition: color 0.2s; }
+    .nav-links a:hover { color: #ffffff; }
+    
     .nav-links .quote-btn {
-      background: var(--accent);
+      background: var(--accent-red);
       color: #fff;
-      padding: 0.5rem 1.25rem;
+      padding: 0.6rem 1.25rem;
       border-radius: 4px;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
     }
-    .nav-links .quote-btn:hover { background: var(--accent-hover); }
+    .nav-links .quote-btn:hover { background: var(--accent-hover); transform: translateY(-1px); color: #fff; }
 
     /* Hero */
     .hero {
@@ -74,8 +83,8 @@
       border-bottom: 1px solid var(--border);
     }
     .hero-image {
-      background: linear-gradient(rgba(12, 10, 18, 0.2), rgba(12, 10, 18, 0.8)), 
-                  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80') center/cover;
+      background: linear-gradient(rgba(1, 42, 93, 0.2), rgba(0, 0, 0, 0.6)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80') center/cover;
     }
     .hero-content {
       padding: 4rem 5%;
@@ -84,120 +93,130 @@
       justify-content: center;
       background: var(--bg-alt);
     }
-    .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px; font-weight: 800; }
-    .hero-content h1 span { color: var(--accent-hover); }
-    .hero-content p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 480px; }
-    .hero-actions { display: flex; gap: 1.5rem; align-items: center; }
-    .btn-primary { background: var(--accent); color: #fff; padding: 0.85rem 1.75rem; border-radius: 4px; font-weight: 600; transition: background 0.2s; }
+    .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px; font-weight: 800; color: var(--text-main); text-transform: uppercase; }
+    .hero-content h1 span.blue-text { color: var(--accent-blue); }
+    .hero-content h1 span.red-text { color: var(--accent-red); }
+    .hero-content p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; font-weight: 500; }
+    .hero-actions { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent-red); color: #fff; padding: 0.85rem 1.75rem; border-radius: 4px; font-weight: 700; transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
     .btn-primary:hover { background: var(--accent-hover); }
-    .phone-link { font-weight: 600; color: #fff; font-size: 1.1rem; }
-    .phone-link span { color: var(--accent-hover); }
+    .phone-link { font-weight: 700; color: var(--text-main); font-size: 1.1rem; }
+    .phone-link span { color: var(--accent-blue); }
 
     /* Feature Banner */
     .feature-banner {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: var(--accent);
+      background: var(--accent-blue);
       color: #fff;
       text-align: center;
       font-weight: 600;
       padding: 1.5rem 5%;
       letter-spacing: 0.5px;
+      border-bottom: 4px solid var(--accent-red);
+      text-transform: uppercase;
+      font-size: 0.9rem;
     }
-    .feature-banner div { padding: 0.5rem; border-right: 1px solid rgba(255,255,255,0.15); }
+    .feature-banner div { padding: 0.5rem; border-right: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
     .feature-banner div:last-child { border-right: none; }
 
     /* Common Section Styles */
     section { padding: 6rem 5%; border-bottom: 1px solid var(--border); }
-    .section-tag { color: var(--accent-hover); font-weight: 700; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1.5px; display: block; margin-bottom: 0.75rem; }
-    .section-title { font-size: 2.75rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.5px; }
-    .section-title span { color: var(--accent-hover); }
-    .section-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin-bottom: 4rem; }
+    .section-tag { color: var(--accent-red); font-weight: 800; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1.5px; display: block; margin-bottom: 0.75rem; }
+    .section-title { font-size: 2.75rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.5px; color: var(--text-main); text-transform: uppercase; }
+    .section-title span { color: var(--accent-blue); }
+    .section-desc { color: var(--text-muted); font-size: 1.15rem; max-width: 700px; margin-bottom: 4rem; }
 
     /* Services Section */
     .bg-alt-section { background-color: var(--bg-alt); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
-    .service-card { background: var(--bg-main); padding: 2.5rem 2rem; border-radius: 6px; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; }
-    .service-card:hover { transform: translateY(-4px); border-color: var(--accent); }
-    .service-card h3 { font-size: 1.35rem; margin-bottom: 1rem; font-weight: 700; }
-    .service-card p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
-    .service-card a { color: var(--accent-hover); font-weight: 600; font-size: 0.95rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .service-card { background: var(--bg-main); padding: 2.5rem 2rem; border-radius: 6px; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+    .service-card:hover { transform: translateY(-4px); border-color: var(--accent-blue); box-shadow: 0 10px 20px rgba(1,42,93,0.08); }
+    .service-card h3 { font-size: 1.25rem; margin-bottom: 1.25rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; }
+    .service-card ul { margin-bottom: 1.5rem; }
+    .service-card ul li { color: var(--text-muted); margin-bottom: 0.75rem; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 500; }
+    .service-card ul li::before { content: "✓"; color: var(--accent-red); font-weight: bold; }
+    .service-card a { color: var(--accent-red); font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .service-card a:hover { color: var(--accent-hover); }
 
-    /* Split Section */
-    .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .split-image { position: relative; }
-    .split-image img { width: 100%; aspect-ratio: 4/3; border-radius: 6px; border: 1px solid var(--border); }
-    .badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--accent); color: white; padding: 1.5rem; border-radius: 4px; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .feature-list { display: grid; gap: 2rem; margin-top: 2.5rem; }
-    .feature-item h4 { font-size: 1.15rem; margin-bottom: 0.35rem; color: #fff; }
-    .feature-item p { color: var(--text-muted); font-size: 0.95rem; }
-
-    /* Gallery (Clickable Categories) */
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .gallery-item { cursor: pointer; position: relative; group; }
-    .gallery-image-container { position: relative; overflow: hidden; border-radius: 6px; border: 1px solid var(--border); aspect-ratio: 4/3; margin-bottom: 1rem; }
-    .gallery-item img { width: 100%; height: 100%; transition: transform 0.4s ease; }
+    /* Demanding Environments Split */
+    .demanding-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .demanding-img { width: 100%; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     
-    /* Interactive Hover State Overlays */
-    .gallery-item:hover img { transform: scale(1.04); }
-    .action-overlay { position: absolute; inset: 0; background: rgba(12, 10, 18, 0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+    .gallery-item { cursor: pointer; position: relative; }
+    .gallery-image-container { position: relative; overflow: hidden; border-radius: 6px; border: 1px solid var(--border); aspect-ratio: 4/3; margin-bottom: 1.25rem; }
+    .gallery-item img { width: 100%; height: 100%; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .action-overlay { position: absolute; inset: 0; background: rgba(1, 42, 93, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
     .gallery-item:hover .action-overlay { opacity: 1; }
-    .action-overlay span { background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem; }
-    
-    .gallery-item-title { font-weight: 700; font-size: 1.15rem; color: #fff; display: flex; justify-content: space-between; align-items: center; }
-    .gallery-item-title span { color: var(--accent-hover); font-size: 0.9rem; font-weight: 500; }
+    .action-overlay span { background: var(--accent-red); color: white; padding: 0.6rem 1.25rem; border-radius: 4px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .gallery-item-title { font-weight: 800; font-size: 1.15rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; }
+    .gallery-item-title span { color: var(--accent-blue); font-size: 1.2rem; }
 
-    /* Dynamic Popup Modal Gallery */
+    /* Modal Gallery */
     .modal {
       display: none;
       position: fixed;
       inset: 0;
-      background-color: rgba(6, 4, 10, 0.98);
+      background-color: rgba(5, 7, 10, 0.98);
       z-index: 2000;
       align-items: center;
       justify-content: center;
       padding: 2rem;
     }
-    .modal-wrapper { position: relative; max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
-    .modal-img-container { width: 100%; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 6px; background: #000; }
-    .modal-content { max-height: 70vh; max-width: 100%; object-fit: contain; }
-    
-    .modal-caption { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 700; text-align: center; color: #fff; width: 100%; display: flex; justify-content: space-between; }
-    .modal-counter { color: var(--text-muted); font-weight: 500; font-size: 1rem; }
-    
-    .close-modal { position: absolute; top: -3.5rem; right: 0; color: var(--text-muted); font-size: 2.5rem; cursor: pointer; transition: color 0.2s; }
+    .modal-wrapper { position: relative; max-width: 1000px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .modal-img-container { width: 100%; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; background: #000; }
+    .modal-content { max-height: 80vh; max-width: 100%; object-fit: contain; }
+    .modal-caption { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 700; text-align: center; color: #fff; width: 100%; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 1px; }
+    .modal-counter { color: var(--accent-red); font-weight: 800; font-size: 1.1rem; }
+    .close-modal { position: absolute; top: -3.5rem; right: 0; color: #94a3b8; font-size: 2.5rem; cursor: pointer; transition: color 0.2s; }
     .close-modal:hover { color: #fff; }
-    
-    .modal-arrow { position: absolute; top: 45%; transform: translateY(-50%); background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px; transition: background 0.2s; }
-    .modal-arrow:hover { background: var(--accent); }
+    .modal-arrow { position: absolute; top: 45%; transform: translateY(-50%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 2rem; padding: 0.5rem 1rem; cursor: pointer; border-radius: 4px; transition: background 0.2s; }
+    .modal-arrow:hover { background: var(--accent-blue); }
     .prev-arrow { left: -5rem; }
     .next-arrow { right: -5rem; }
 
-    /* Contact Section */
-    .contact-container { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; background: var(--bg-alt); padding: 4rem; border-radius: 8px; border: 1px solid var(--border); }
-    .contact-info h3 { margin-bottom: 2rem; font-size: 1.75rem; font-weight: 700; }
+    /* Contact Form Layout */
+    .contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; background: var(--bg-alt); padding: 4rem; border-radius: 8px; border: 1px solid var(--border); }
+    .contact-info h3 { margin-bottom: 2rem; font-size: 1.75rem; font-weight: 800; color: var(--text-main); text-transform: uppercase; }
     .info-row { margin-bottom: 2rem; }
-    .info-row strong { display: block; color: var(--accent-hover); margin-bottom: 0.35rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px; }
-    .info-row a:hover { color: #fff; text-decoration: underline; }
+    .info-row strong { display: block; color: var(--accent-blue); margin-bottom: 0.35rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; }
+    .info-row a { font-weight: 600; color: var(--text-muted); }
+    .info-row a:hover { color: var(--accent-red); }
     
-    .contact-form { display: grid; gap: 1.25rem; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.85rem; background: var(--bg-main); border: 1px solid var(--border); color: #fff; border-radius: 4px; font-family: inherit; font-size: 0.95rem; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-hover); }
-    .submit-btn { background: var(--accent); color: #fff; padding: 1.1rem; border: none; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
-    .submit-btn:hover { background: var(--accent-hover); }
+    .contact-form { display: grid; gap: 1.5rem; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .form-group { position: relative; }
+    .form-group label { display: block; color: var(--text-muted); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1rem; background: var(--bg-main); border: 1px solid #cbd5e1; color: var(--text-main); border-radius: 4px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-blue); }
+    
+    /* Checkbox Group Layout */
+    .services-checkbox-title { color: var(--text-muted); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; }
+    .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .checkbox-item { display: flex; align-items: center; gap: 0.75rem; background: var(--bg-main); padding: 0.85rem 1rem; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: background 0.2s; }
+    .checkbox-item:hover { background: rgba(1,42,93,0.03); border-color: var(--accent-blue); }
+    .checkbox-item input { width: 1.2rem; height: 1.2rem; cursor: pointer; accent-color: var(--accent-red); }
+    .checkbox-item span { font-size: 0.95rem; color: var(--text-main); font-weight: 600; }
+
+    .submit-btn { background: var(--accent-red); color: #fff; padding: 1.2rem; border: none; border-radius: 4px; font-weight: 800; cursor: pointer; font-size: 1rem; transition: background 0.2s, transform 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+    .submit-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
 
     /* Footer */
-    footer { background: #06040a; color: var(--text-muted); padding: 5rem 5% 2rem; border-top: 1px solid var(--border); }
+    footer { background: #05070a; color: #94a3b8; padding: 5rem 5% 2rem; border-top: 1px solid var(--border); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-    .footer-brand img { height: 40px; margin-bottom: 1.5rem; }
-    .footer-brand p { max-width: 400px; font-size: 0.95rem; }
-    .footer-links h5 { color: #fff; font-size: 1.1rem; margin-bottom: 1.25rem; font-weight: 700; }
+    .footer-brand .logo-container { margin-bottom: 1.5rem; background: transparent; padding: 0; }
+    .footer-brand p { max-width: 400px; font-size: 0.95rem; line-height: 1.6; }
+    .footer-links h5 { color: #fff; font-size: 1.1rem; margin-bottom: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
     .footer-links li { margin-bottom: 0.75rem; font-size: 0.95rem; }
-    .footer-links a:hover { color: #fff; }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.875rem; }
+    .footer-links a:hover { color: var(--accent-red); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 600; }
     
-    .credit { text-align: center; padding: 1.2rem; background: #000; color: #475569; font-size: 0.8rem; border-top: 1px solid #111; }
-    .credit a { color: #64748b; text-decoration: underline; }
+    .credit { text-align: center; padding: 1.2rem; background: #000; color: #475569; font-size: 0.8rem; border-top: 1px solid #111; text-transform: uppercase; letter-spacing: 1px;}
+    .credit a { color: #64748b; text-decoration: none; font-weight: bold; }
+    .credit a:hover { color: #fff; }
 
     /* Responsive Adapters */
     @media (max-width: 1024px) {
@@ -206,12 +225,15 @@
       .modal-caption { margin-bottom: 3rem; }
     }
     @media (max-width: 900px) {
-      .hero, .split-section, .contact-container { grid-template-columns: 1fr; gap: 3rem; }
+      .hero, .demanding-split, .contact-container { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row-2, .checkbox-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .checkbox-grid { gap: 0.75rem; }
       .feature-banner { grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; }
-      .feature-banner div { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .hero-image { min-height: 350px; }
+      .feature-banner div { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); justify-content: flex-start; }
+      .hero-image { min-height: 400px; }
       .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .contact-container { padding: 2.5rem; }
+      .hero-content h1 { font-size: 2.75rem; }
     }
     @media (max-width: 600px) {
       .nav-links { display: none; }
@@ -222,144 +244,150 @@
 <body>
 
   <div class="top-bar">
-    <span>📍 Serving Toronto, Hamilton, Oakville & Surrounding Areas</span>
-    <div><a href="tel:6479147524">(647) 914-7524</a></div>
+    <span>📍 Serving Commercial & Industrial Clients</span>
+    <div style="display: flex; align-items: center; gap: 1.5rem;">
+      <span class="tagline-badge">Fast. Reliable. Done Right.</span>
+      <a href="tel:+16479147524">+1 (647) 914-7524</a>
+    </div>
   </div>
 
   <nav>
-    <a href="#" class="logo">
-      <img src="Sylvester-Contracting-logo.png" alt="Sylvester Contracting">
+    <a href="#" class="logo-container">
+      <img src="logo.png" alt="RapidCare Industrial Services Logo" class="logo-img">
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#gallery">Portfolio</a></li>
-      <li><a href="#contact" class="quote-btn">Needing a quote?</a></li>
+      <li><a href="#contact" class="quote-btn">Request Quote</a></li>
     </ul>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Toronto's Home <span>Transformation</span> Experts</h1>
-      <p>Building a better future. We build your homes with trust. Premier residential and commercial custom renovations and structural services.</p>
+      <h1>Industrial Repairs & <span class="blue-text">Facility</span> <span class="red-text">Services</span></h1>
+      <p>Built for warehouses, factories, and commercial sites. We deliver heavy-duty solutions ensuring your operations never miss a beat.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get a Free Estimate</a>
-        <a href="tel:6479147524" class="phone-link">Call <span>(647) 914-7524</span></a>
+        <a href="#contact" class="btn-primary">Get a Quote Today</a>
+        <a href="tel:+16479147524" class="phone-link">Call Direct: <span>+1 (647) 914-7524</span></a>
       </div>
     </div>
     <div class="hero-image"></div>
   </header>
 
   <div class="feature-banner">
-    <div>Quality Craftsmanship</div>
-    <div>Personalized Solutions</div>
-    <div>Timely Completion</div>
-    <div>Toronto & GTA Area</div>
+    <div>✓ On-Time & Dependable</div>
+    <div>✓ Safety-Focused</div>
+    <div>✓ Heavy-Duty Experience</div>
+    <div>✓ Professional Results</div>
   </div>
 
   <section id="services" class="bg-alt-section">
-    <span class="section-tag">What We Offer</span>
-    <h2 class="section-title">Our <span>Services</span></h2>
-    <p class="section-desc">Sylvester Contracting accompanies you through every phase of building your dream home, from structural modifications to high-end aesthetic finishes.</p>
+    <span class="section-tag">What We Do</span>
+    <h2 class="section-title">Facility <span>Solutions</span></h2>
+    <p class="section-desc">Comprehensive maintenance, repair, and structural services engineered specifically for the demands of industrial properties.</p>
     
     <div class="services-grid">
       <div class="service-card">
-        <h3>Renovations</h3>
-        <p>Transform your space with our expert renovation services. From bathroom makeovers to basement transformations and kitchen upgrades, we deliver with precision.</p>
-        <a href="#contact">Get a Quote &rarr;</a>
+        <h3>Concrete & Structural</h3>
+        <ul>
+          <li>Concrete Repair & Finishing</li>
+          <li>Structural Repairs (Non-Engineering)</li>
+          <li>Crack Sealing & Joint Repair</li>
+        </ul>
+        <a href="#contact">Schedule Repair &rarr;</a>
       </div>
       <div class="service-card">
-        <h3>Specialized Services</h3>
-        <p>Explore specialized structural assets including side entrance basement walkouts, professional painting, waterproofing solutions, and structural underpinning.</p>
-        <a href="#contact">Get a Quote &rarr;</a>
+        <h3>Industrial Coatings</h3>
+        <ul>
+          <li>Industrial Painting (Interior)</li>
+          <li>Industrial Painting (Exterior)</li>
+          <li>Surface Preparation & Coatings</li>
+        </ul>
+        <a href="#contact">Schedule Coating &rarr;</a>
       </div>
       <div class="service-card">
-        <h3>Flooring & Panelling</h3>
-        <p>Enhance your space with tailored flooring configurations. We provide flawless residential and commercial flooring installations alongside premium Isowall panelling.</p>
-        <a href="#contact">Get a Quote &rarr;</a>
+        <h3>Facility Maintenance</h3>
+        <ul>
+          <li>Equipment Area Cleanup</li>
+          <li>General Facility Maintenance</li>
+          <li>Safety Line & Floor Marking</li>
+        </ul>
+        <a href="#contact">Schedule Maintenance &rarr;</a>
       </div>
       <div class="service-card">
-        <h3>Maintenance</h3>
-        <p>Rely on us for all ongoing property requirements. Our residential and commercial assets ensure your build structural longevity remains in top condition.</p>
-        <a href="#contact">Get a Quote &rarr;</a>
+        <h3>Loading & Logistics</h3>
+        <ul>
+          <li>Loading Dock Repairs</li>
+          <li>Bay Door Surround Adjustments</li>
+          <li>Impact Damage Restoration</li>
+        </ul>
+        <a href="#contact">Schedule Service &rarr;</a>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="split-section">
-      <div class="split-image">
-        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="Sylvester Contracting Jobsite">
-        <div class="badge">20+ Years Experience</div>
-      </div>
+  <section id="environment">
+    <div class="demanding-split">
       <div>
-        <span class="section-tag">Why Choose Us</span>
-        <h2 class="section-title">Honest Work.<br><span>Fair Prices.</span></h2>
-        <p class="section-desc">With decades of active service across the structural and layout industry, Sylvester Contracting combines core technical ingenuity and adaptability to deliver excellence to every client.</p>
+        <span class="section-tag">Industrial Grade</span>
+        <h2 class="section-title">Built For <span>Demanding</span> Environments</h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">We understand that downtime costs money. RapidCare works efficiently with minimal disruption to your daily operations, ensuring your facility remains safe, compliant, and structurally sound.</p>
         
-        <div class="feature-list">
-          <div class="feature-item">
-            <h4>Quality Craftsmanship</h4>
-            <p>Experience structural excellence across every build phase with meticulous attention to detail and superior raw workmanship.</p>
+        <div style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <span style="background:var(--accent-blue); color:#fff; font-weight:700; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.5;"><strong style="color:var(--text-main); display:block; margin-bottom:0.25rem; text-transform:uppercase;">Minimal Disruption</strong> We schedule and execute workflows around your production shifts to keep your factory floor moving.</p>
           </div>
-          <div class="feature-item">
-            <h4>Personalized Solutions</h4>
-            <p>Tailored workflows built around your specific residential parameters, ensuring custom execution matching your explicit intent and budget.</p>
-          </div>
-          <div class="feature-item">
-            <h4>Timely Project Completion</h4>
-            <p>Count on robust project management pipelines targeting concrete milestone markers to execute clean delivery within schedule constraints.</p>
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <span style="background:var(--accent-red); color:#fff; font-weight:700; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</span>
+            <p style="color:var(--text-muted); font-size:1rem; line-height:1.5;"><strong style="color:var(--text-main); display:block; margin-bottom:0.25rem; text-transform:uppercase;">Heavy-Duty Results</strong> Using industrial-grade epoxies, structural concrete mixes, and high-traffic coatings designed to endure.</p>
           </div>
         </div>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80" alt="Industrial Docking Bay" class="demanding-img">
       </div>
     </div>
   </section>
 
   <section id="gallery" class="bg-alt-section">
     <span class="section-tag">Our Work</span>
-    <h2 class="section-title">Results That <span>Speak</span> for Themselves</h2>
-    <p class="section-desc">Select any project category below to open up the deep gallery view of our completed builds.</p>
+    <h2 class="section-title">Industrial and Residential <span>Project</span> Archives</h2>
+    <p class="section-desc">Select any project category below to view our comprehensive image archives.</p>
     
     <div class="gallery-grid">
       <div class="gallery-item" 
-           data-title="Kitchen Renovations" 
-           data-images="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1565183997392-2f6f122e5912?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+           data-title="Concrete & Structural Repairs" 
+           data-images="https://conconow.wordpress.com/wp-content/uploads/2018/11/concrete-finishing-techniques-conco.jpeg,https://www.nox-crete.com/wp-content/uploads/2024/06/Stage-1-2.jpg,https://www.nox-crete.com/wp-content/uploads/2024/06/Stage-1-Patio-Finishing-2024.jpg,https://www.architecturelab.net/wp-content/uploads/2022/05/Image7-768x1024.jpg,https://lirp.cdn-website.com/2b1c80cf/dms3rep/multi/opt/F372B217-F517-4ACA-AF72-C5835508901C_1_201_a-1920w.jpeg">
         <div class="gallery-image-container">
-          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=600&q=80" alt="Kitchen Renovations">
-          <div class="action-overlay"><span>View Gallery (+3)</span></div>
+          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*fAPzlN9umyKI5Iza.jpg" alt="Concrete Repairs">
+          <div class="action-overlay"><span>View 5 Images</span></div>
         </div>
-        <div class="gallery-item-title">Kitchen Upgrades <span>&rarr;</span></div>
+        <div class="gallery-item-title">Concrete & Floors <span>&rarr;</span></div>
       </div>
 
       <div class="gallery-item" 
-           data-title="Bathroom Transformations" 
-           data-images="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1620626011161-997e5192731a?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80">
+           data-title="Industrial Painting & Coatings" 
+           data-images="https://phillipshomeimprovements.com/wp-content/uploads/2024/01/exterior-painting-before-after-divided-white-two-stories-red-door-dallas-tx-image.webp,https://chravedavispainting.com/wp-content/uploads/2025/10/Interior-painting-before-after-768x768.jpg,https://enviro-painting.com/wp-content/uploads/2025/07/Interior-Painting-1.jpg,https://enviro-painting.com/wp-content/uploads/2025/07/Interior-Painting-2.jpg,https://enviro-painting.com/wp-content/uploads/2023/04/ext_painting_after-2048x1366.jpg">
         <div class="gallery-image-container">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Bathroom Transformations">
-          <div class="action-overlay"><span>View Gallery (+3)</span></div>
+          <img src="https://chravedavispainting.com/wp-content/uploads/2025/10/project-gallery-before-and-after-10-768x768.jpg" alt="Industrial Painting">
+          <div class="action-overlay"><span>View 5 Images</span></div>
         </div>
-        <div class="gallery-item-title">Bathroom Transformations <span>&rarr;</span></div>
+        <div class="gallery-item-title">Painting & Coatings <span>&rarr;</span></div>
       </div>
 
       <div class="gallery-item" 
-           data-title="Flooring & Panelling" 
-           data-images="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80">
+           data-title="Loading Docks & Logistics Areas" 
+           data-images="https://www.banksindustrial.com/hs-fs/hubfs/Concrete/loading%20dock%20repair/loading-dock-concrete-repair-hero-1-1200.webp?width=1200&height=436&name=loading-dock-concrete-repair-hero-1-1200.webp,https://ri-repair.com/wp-content/uploads/2019/04/ri-repair-epoxy-floor-038--768x555.jpg,https://ri-repair.com/wp-content/uploads/2019/04/ri-repair-epoxy-floor-037--768x555.jpg,https://ri-repair.com/wp-content/uploads/2022/01/warehouse-epoxy-floor-repair-ribefore-768x555.jpg,https://ri-repair.com/wp-content/uploads/2022/01/warehouse-epoxy-floor-repair-ri-after-768x555.jpg">
         <div class="gallery-image-container">
-          <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80" alt="Flooring & Panelling">
-          <div class="action-overlay"><span>View Gallery (+2)</span></div>
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Loading Docks">
+          <div class="action-overlay"><span>View 5 Images</span></div>
         </div>
-        <div class="gallery-item-title">Flooring & Panelling <span>&rarr;</span></div>
+        <div class="gallery-item-title">Loading Docks <span>&rarr;</span></div>
       </div>
 
-      <div class="gallery-item" 
-           data-title="Specialized Walkouts & Structural" 
-           data-images="https://images.unsplash.com/photo-1541888062820-fb894fbd81b6?auto=format&fit=crop&w=1200&q=80,https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80">
-        <div class="gallery-image-container">
-          <img src="https://images.unsplash.com/photo-1541888062820-fb894fbd81b6?auto=format&fit=crop&w=600&q=80" alt="Specialized Structural">
-          <div class="action-overlay"><span>View Gallery (+2)</span></div>
-        </div>
-        <div class="gallery-item-title">Specialized Walkouts <span>&rarr;</span></div>
-      </div>
+      
     </div>
   </section>
 
@@ -369,12 +397,12 @@
       <button class="modal-arrow prev-arrow" id="modal-prev">&#10094;</button>
       
       <div class="modal-img-container">
-        <img id="modal-target-img" class="modal-content" src="" alt="Active Project Image">
+        <img id="modal-target-img" class="modal-content" src="" alt="Active Presentation View">
       </div>
       
       <div class="modal-caption">
         <span id="modal-title-text">Project Category</span>
-        <span class="modal-counter" id="modal-counter-text">1 / 1</span>
+        <span class="modal-counter" id="modal-counter-text">1 / 5</span>
       </div>
       
       <button class="modal-arrow next-arrow" id="modal-next">&#10095;</button>
@@ -384,119 +412,238 @@
   <section id="contact">
     <div class="contact-container">
       <div>
-        <span class="section-tag">Contact Us</span>
-        <h2 class="section-title">Get Your <span>Custom Quote</span></h2>
-        <p class="section-desc" style="margin-bottom: 2rem;">Ready to upgrade your space? Contact our team of experts for tailored solutions and quotations.</p>
-        
+        <span class="section-tag">Partner With Us</span>
+        <h2 class="section-title">Request an <span>Industrial</span> Quote</h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">Provide your facility details below. A field manager will evaluate your submission and contact you promptly to arrange an on-site assessment.</p>
+
         <div class="contact-info">
           <div class="info-row">
-            <strong>Phone / Text</strong>
-            <a href="tel:6479147524" style="font-size: 1.25rem; font-weight: 700; color: #fff;">(647) 914-7524</a>
+            <strong>Phone / Direct SMS</strong>
+            <a href="tel:+16479147524" style="font-size: 1.35rem; font-weight: 800; color: var(--text-main);">+1 (647) 914-7524</a>
           </div>
           <div class="info-row">
-            <strong>Email</strong>
-            <a href="mailto:info@sylvestercontracting.ca">info@sylvestercontracting.ca</a>
+            <strong>Inquiries</strong>
+            <a href="mailto:info@rapidcare.ca">info@rapidcare.ca</a>
           </div>
           <div class="info-row">
-            <strong>Location</strong>
-            4 Greentree Ct, Toronto, ON M6M 2A5
+            <strong>Service Area</strong>
+            Serving the Greater Toronto Area & Surrounding Zones
           </div>
         </div>
       </div>
 
       <div>
-        <form class="contact-form" action="#" method="POST">
-          <div class="form-group">
-            <input type="text" name="name" required placeholder="Full Name *">
+        <!-- UPDATED: Added an id="commercial-form" to hook into JS -->
+        <form class="contact-form" id="commercial-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="abcd8e8a-3db5-4661-8a2d-46ae042c6934">
+
+          <!-- ADDED: Success Message Box (Hidden by default) -->
+          <div id="form-success-msg" class="success-flash-box" style="display: none;">
+            <h3>✓ Form Submitted!</h3>
+            <p>Redirecting you back to home...</p>
           </div>
-          <div class="form-group">
-            <input type="email" name="email" required placeholder="Email Address *">
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Contact Name *</label>
+              <input type="text" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label>Company Name(optional)</label>
+              <input type="text" name="company" placeholder="Warehouse Logistics Inc.">
+            </div>
           </div>
-          <div class="form-group">
-            <input type="tel" name="phone" placeholder="Phone Number">
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="+1 (416) 555-0199">
+            </div>
+            <div class="form-group">
+              <label>Address *</label>
+              <input type="text" name="address" required placeholder="Street, City">
+            </div>
           </div>
-          <div class="form-group">
-            <select name="service" required>
-              <option value="">-- Select a service --</option>
-              <option value="Renovations">Home Renovations</option>
-              <option value="Specialized">Specialized Services (Walkouts, etc)</option>
-              <option value="Flooring">Flooring & Panelling</option>
-              <option value="Maintenance">General Maintenance</option>
-              <option value="Other">Other / Not Sure</option>
-            </select>
+
+          <div>
+            <span class="services-checkbox-title">Select Required Services *</span>
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Concrete">
+                <span>Concrete Repair & Finishing</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Painting">
+                <span>Painting</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Cleanup">
+                <span>Equipment / Area Cleanup</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Docks">
+                <span>Loading Dock Repairs</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Structural">
+                <span>Structural Repairs</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="service_interest[]" value="Maintenance">
+                <span>Facility Maintenance</span>
+              </label>
+            </div>
           </div>
+
           <div class="form-group">
-            <textarea name="message" rows="4" required placeholder="Project Details..."></textarea>
+            <label>Project Scope & Requirements *</label>
+            <textarea name="message" rows="4" required placeholder="Please describe the work required, square footage, and operating hours..."></textarea>
           </div>
-          <button type="submit" class="submit-btn">Request Quote &rarr;</button>
+
+          <button type="submit" class="submit-btn" id="submit-btn-text">Submit Service Request &rarr;</button>
         </form>
       </div>
     </div>
   </section>
+  <!-- ADDED: Simple embedded CSS for the success styling -->
+  <style>
+    .success-flash-box {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      padding: 1.25rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-family: sans-serif;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .success-flash-box h3 { margin: 0 0 0.25rem 0; font-size: 1.2rem; }
+    .success-flash-box p { margin: 0; font-size: 0.95rem; opacity: 0.85; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="Sylvester-Contracting-logo.png" alt="Sylvester Contracting Service Inc.">
-        <p>A renowned construction company committed to professionalism and reliability. Specializing in high-performance residential modifications and clean commercial construction solutions.</p>
+        <a href="#" class="logo-container" style="margin-bottom:1.5rem;">
+          <img src="logo.png" alt="RapidCare Logo" class="logo-img">
+        </a>
+        <p>Built for demanding environments. We provide elite facility maintenance, heavy-duty concrete repair, and industrial painting with minimal operational disruption.</p>
       </div>
       <div class="footer-links">
-        <h5>Services</h5>
+        <h5>Industrial Services</h5>
         <ul>
-          <li><a href="#services">Renovations</a></li>
-          <li><a href="#services">Specialized Services</a></li>
-          <li><a href="#services">Flooring & Panelling</a></li>
-          <li><a href="#services">Maintenance</a></li>
+          <li><a href="#services">Concrete Repair & Finishing</a></li>
+          <li><a href="#services">Industrial Painting</a></li>
+          <li><a href="#services">Loading Dock Repairs</a></li>
+          <li><a href="#services">Equipment Area Cleanup</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h5>Company</h5>
+        <h5>Contact Information</h5>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#gallery">Portfolio</a></li>
-          <li><a href="#contact">Get a Quote</a></li>
+          <li><strong style="color:#fff;">+1 (647) 914-7524</strong></li>
+          <li><a href="mailto:info@rapidcare.ca">info@rapidcare.ca</a></li>
+          <li><a href="#contact">Request Assessment</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Sylvester Contracting · Toronto, ON</span>
-      <span>Serving the Greater Toronto Area</span>
+      <span>© 2026 RapidCare Industrial Services. All Rights Reserved.</span>
+      <span style="color:var(--accent-red); font-weight:800;">Fast. Reliable. Done Right.</span>
     </div>
   </footer>
 
   <div class="credit">
-    Powered by <a href="https://timelessventures.ca" target="_blank" rel="noopener">Timeless Ventures</a>
+    Powered by <a href="#" target="_blank" rel="noopener">Timeless Ventures</a>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+
+      /* ADDED: Web3Forms AJAX Submission Module */
+      const form = document.getElementById('commercial-form');
+      const successMsg = document.getElementById('form-success-msg');
+      const submitBtn = document.getElementById('submit-btn-text');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents page reload/redirect
+
+        // Visual feedback for submission state
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending Request...";
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        })
+                .then(async (response) => {
+                  let res = await response.json();
+                  if (response.status == 200) {
+                    // Show the success flash banner
+                    successMsg.style.display = 'block';
+                    form.reset(); // Clear form inputs
+
+                    // Redirect to homepage ("/") after 2.5 seconds
+                    setTimeout(() => {
+                      window.location.href = "/";
+                    }, 2500);
+                  } else {
+                    // Fallback if Web3forms returns an error
+                    alert(res.message || "Something went wrong. Please try again.");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Submit Service Request →";
+                  }
+                })
+                .catch(error => {
+                  console.error(error);
+                  alert("Form submission failed. Check your network connection.");
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = "Submit Service Request →";
+                });
+      });
+
+
+      /* Existing Gallery / Lightbox Control Module */
       const galleryItems = document.querySelectorAll('.gallery-item');
       const modal = document.getElementById('gallery-modal');
       const modalImg = document.getElementById('modal-target-img');
       const modalTitle = document.getElementById('modal-title-text');
       const modalCounter = document.getElementById('modal-counter-text');
-      
+
       const prevBtn = document.getElementById('modal-prev');
       const nextBtn = document.getElementById('modal-next');
       const closeBtn = document.getElementById('modal-close');
-      
+
       let imageArray = [];
       let activeIndex = 0;
 
-      // Event hook for opening a clean category array
       galleryItems.forEach(item => {
         item.addEventListener('click', () => {
           const rawImagesString = item.getAttribute('data-images');
           const title = item.getAttribute('data-title');
-          
+
           imageArray = rawImagesString.split(',');
           activeIndex = 0;
-          
+
           modalTitle.textContent = title;
           renderModalImage();
-          
+
           modal.style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // Lock background scrolling
+          document.body.style.overflow = 'hidden';
         });
       });
 
@@ -517,23 +664,20 @@
 
       function shutdownModal() {
         modal.style.display = 'none';
-        document.body.style.overflow = ''; // Restore background scrolling
+        document.body.style.overflow = '';
         modalImg.src = '';
       }
 
-      // Event Control Binding
       nextBtn.addEventListener('click', (e) => { e.stopPropagation(); navigateNext(); });
       prevBtn.addEventListener('click', (e) => { e.stopPropagation(); navigatePrev(); });
       closeBtn.addEventListener('click', shutdownModal);
-      
-      // Close viewport if clicking backdrop
+
       modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('modal-wrapper') || e.target.classList.contains('modal-img-container')) {
           shutdownModal();
         }
       });
 
-      // Optional Keyboard Controls
       document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
           if (e.key === 'Escape') shutdownModal();
